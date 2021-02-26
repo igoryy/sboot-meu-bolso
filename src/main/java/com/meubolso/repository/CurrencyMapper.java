@@ -4,10 +4,6 @@ import com.meubolso.currency_api.DataIntegration;
 import com.meubolso.domain.CurrencyDomain;
 import com.meubolso.domain.ListCurrency;
 
-import java.util.ArrayList;
-import java.util.Currency;
-import java.util.stream.Collectors;
-
 public class CurrencyMapper {
 
 
@@ -21,7 +17,7 @@ public class CurrencyMapper {
                 .name(dataIntegration.getBTC().getName())
                 .high(dataIntegration.getBTC().getHigh())
                 .low(dataIntegration.getBTC().getLow())
-                .build();
+                .build());
 
         response.add(CurrencyDomain.builder()
                 .code(dataIntegration.getEUR().getCode())
@@ -29,7 +25,7 @@ public class CurrencyMapper {
                 .name(dataIntegration.getEUR().getName())
                 .high(dataIntegration.getEUR().getHigh())
                 .low(dataIntegration.getEUR().getLow())
-                .build();
+                .build());
 
         response.add(CurrencyDomain.builder()
                 .code(dataIntegration.getUSD().getCode())
@@ -37,7 +33,7 @@ public class CurrencyMapper {
                 .name(dataIntegration.getUSD().getName())
                 .high(dataIntegration.getUSD().getHigh())
                 .low(dataIntegration.getUSD().getLow())
-                .build();
+                .build());
 
 
         return response;
