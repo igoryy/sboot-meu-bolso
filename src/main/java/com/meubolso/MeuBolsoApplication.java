@@ -27,7 +27,7 @@ public class MeuBolsoApplication {
 			@Override
 			protected void init(){
 				super.init();
-				setBasePath("https://economia.awesomeapi.com.br/all/USD-BRL,EUR-BRL,BTC-BRL");
+				setBasePath("https://economia.awesomeapi.com.br/");
 			}
 		};
 	}

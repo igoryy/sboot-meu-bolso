@@ -90,8 +90,8 @@
 							<inputSpec>${project.basedir}/src/main/resources/api.yaml</inputSpec>
 							<language>spring</language>
 							<library>spring-boot</library>
-							<modelPackage>com.meubolso</modelPackage>
-							<apiPackage>com.meubolso.provider</apiPackage>
+							<modelPackage>com.meubolso.provider.presentation.representation</modelPackage>
+							<apiPackage>com.meubolso.provider.api</apiPackage>
 							<configOptions>
 								<delegatePattern>true</delegatePattern>
 								<interfaceOnly>true</interfaceOnly>
