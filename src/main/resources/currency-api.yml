@@ -1,0 +1,103 @@
+swagger: "2.0"
+info:
+  description: ""
+  version: "1.0.0"
+  title: "Currency API"
+
+schemes:
+  - "http"
+host: economia.awesomeapi.com.br
+
+paths:
+  /all:
+    get:
+      tags:
+        - "getCurrency"
+      operationId: "getCurrency"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "OK"
+          schema:
+            $ref: '#/definitions/data'
+        400:
+          description: "Bad Request"
+        405:
+          description: "Invalid input"
+definitions:
+  data:
+    type: object
+    properties:
+      USD:
+        $ref: "#/definitions/USD"
+      BTC:
+        $ref: "#/definitions/BTC"
+      EUR:
+        $ref: "#/definitions/EUR"
+  USD:
+    type: object
+    properties:
+      code:
+        type: string
+      codein:
+        type: string
+      name:
+        type: string
+      high:
+        type: string
+        example: '3,9703'
+      low:
+        type: string
+        example: '3,9695'
+      varBid:
+        type: string
+        example: '0,0012'
+      timestamp:
+        type: integer
+        format: int64
+        example: 1557176400
+  EUR:
+    type: object
+    properties:
+      code:
+        type: string
+      codein:
+        type: string
+      name:
+        type: string
+      high:
+        type: string
+        example: '3,9703'
+      low:
+        type: string
+        example: '3,9695'
+      varBid:
+        type: string
+        example: '0,0012'
+      timestamp:
+        type: integer
+        format: int64
+        example: 1557176400
+  BTC:
+    type: object
+    properties:
+      code:
+        type: string
+      codein:
+        type: string
+      name:
+        type: string
+      high:
+        type: string
+        example: '3,9703'
+      low:
+        type: string
+        example: '3,9695'
+      varBid:
+        type: string
+        example: '0,0012'
+      timestamp:
+        type: integer
+        format: int64
+        example: 1557176400

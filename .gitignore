@@ -21,3 +21,13 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+.idea
+.mvn
+.swagger-codegen-ignore
+.swagger-codegen/
+HELP.md
+demo.iml
+mvnw
+mvnw.cmd
+target/

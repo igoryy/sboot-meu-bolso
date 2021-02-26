@@ -1,0 +1,60 @@
+swagger: "2.0"
+info:
+  description: ""
+  version: "1.0.0"
+  title: "Meu Bolso API"
+
+  contact:
+    email: "igoralves159@gmail.com"
+
+host: "petstore.swagger.io"
+
+schemes:
+  - "http"
+paths:
+  /v1/cotacoes:
+    get:
+      tags:
+        - "updateCotacoes"
+      summary: "End point para atualizar cotacoes B3"
+      description: "Consumo de arquivo cotacao historico"
+      operationId: "updateCotacao"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "OK"
+        400:
+          description: "Bad Request"
+        405:
+          description: "Invalid input"
+  /v1/currency:
+    get:
+      tags:
+        - "getCurrency"
+      summary: "End point buscar a moeda"
+      description: "End point buscar a moeda"
+      operationId: "getCurrency"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "OK"
+          schema:
+            $ref: '#/definitions/listCurrency'
+
+        400:
+          description: "Bad Request"
+        405:
+          description: "Invalid input"
+definitions:
+  listCurrency:
+    type: array
+    items:
+      $ref: "#/definitions/currency"
+  currency:
+    type: object
+    properties:
+      code:
+        type: string
+        example: "USD"
