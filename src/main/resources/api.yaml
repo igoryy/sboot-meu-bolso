@@ -41,20 +41,85 @@ paths:
         200:
           description: "OK"
           schema:
-            $ref: '#/definitions/listCurrency'
+            $ref: '#/definitions/data'
 
         400:
           description: "Bad Request"
         405:
           description: "Invalid input"
 definitions:
-  listCurrency:
-    type: array
-    items:
-      $ref: "#/definitions/currency"
-  currency:
+  data:
+    type: object
+    properties:
+      USD:
+        $ref: "#/definitions/USD"
+      BTC:
+        $ref: "#/definitions/BTC"
+      EUR:
+        $ref: "#/definitions/EUR"
+  USD:
     type: object
     properties:
       code:
         type: string
-        example: "USD"
+      codein:
+        type: string
+      name:
+        type: string
+      high:
+        type: string
+        example: '3,9703'
+      low:
+        type: string
+        example: '3,9695'
+      varBid:
+        type: string
+        example: '0,0012'
+      timestamp:
+        type: integer
+        format: int64
+        example: 1557176400
+  EUR:
+    type: object
+    properties:
+      code:
+        type: string
+      codein:
+        type: string
+      name:
+        type: string
+      high:
+        type: string
+        example: '3,9703'
+      low:
+        type: string
+        example: '3,9695'
+      varBid:
+        type: string
+        example: '0,0012'
+      timestamp:
+        type: integer
+        format: int64
+        example: 1557176400
+  BTC:
+    type: object
+    properties:
+      code:
+        type: string
+      codein:
+        type: string
+      name:
+        type: string
+      high:
+        type: string
+        example: '3,9703'
+      low:
+        type: string
+        example: '3,9695'
+      varBid:
+        type: string
+        example: '0,0012'
+      timestamp:
+        type: integer
+        format: int64
+        example: 1557176400
