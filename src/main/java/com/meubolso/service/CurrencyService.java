@@ -1,12 +1,8 @@
 package com.meubolso.service;
 
 import com.meubolso.currency_api.DataIntegration;
-import com.meubolso.domain.CurrencyDomain;
-import com.meubolso.exception.CurrencyException;
-import com.meubolso.provider.presentation.representation.DataRepresentation;
 import com.meubolso.repository.CurrencyRepository;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
