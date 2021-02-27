@@ -1,5 +1,6 @@
 package com.meubolso.repository;
 
+import com.meubolso.currency_api.DataIntegration;
 import com.meubolso.currency_api.provider.GetCurrencyApi;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -10,11 +11,11 @@ public class CurrencyRepository {
 
     GetCurrencyApi api;
 
-    public Object getCurrency(){
+    public DataIntegration getCurrency(){
 
-        var teste = api.getCurrency();
+        var response = api.getCurrency();
 
-        return teste;
+        return response;
     }
 
 }
