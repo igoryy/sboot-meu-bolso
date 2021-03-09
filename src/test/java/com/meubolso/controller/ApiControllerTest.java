@@ -11,6 +11,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.Test;
+import org.springframework.http.HttpStatus;
+
+import java.net.http.HttpResponse;
 
 import static org.junit.Assert.*;
 
@@ -34,7 +37,7 @@ public class ApiControllerTest {
         when(service.getCurrency()).thenReturn(buildMock());
 
         assertNotNull(api.getCurrency());
-        assertEquals(buildMock(), api.getCurrency());
+        assertEquals(HttpStatus.OK, api.getCurrency().getStatusCode());
 
     }
 
