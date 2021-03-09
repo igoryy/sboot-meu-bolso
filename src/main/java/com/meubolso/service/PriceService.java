@@ -85,13 +85,13 @@ public class PriceService {
     @SneakyThrows
     public boolean deleteFilePriceB3(){
 
-        LocalDate d1 = LocalDate.now().minusDays(1);
-        String dataD1 = d1.format(DateTimeFormatter.ofPattern("ddMMyyyy"));
-
         File file = new File("Price" + dataD1 + Constants.ZIP);
+
+        log.info("deleteFilePriceB3 -> Tentativa de delete do arquivo : " + file.getName());
 
         if(file.exists()){
             FileSystemUtils.deleteRecursively(Path.of("Price" + dataD1 + Constants.ZIP));
+            log.info("deleteFilePriceB3 -> Arquivo deletado ");
             return true;
         }
         return false;

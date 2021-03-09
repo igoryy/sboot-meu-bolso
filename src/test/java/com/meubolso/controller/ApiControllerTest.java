@@ -7,6 +7,7 @@ import com.meubolso.currency_api.EURIntegration;
 import com.meubolso.currency_api.USDIntegration;
 import com.meubolso.currency_api.provider.GetCurrencyApi;
 import com.meubolso.service.CurrencyService;
+import com.meubolso.service.PriceService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,11 +25,12 @@ public class ApiControllerTest {
 
     private static ApiController api;
     private static CurrencyService service;
+    private static PriceService priceService;
 
     @Before
     public void setup(){
         service = mock(CurrencyService.class);
-        api = new ApiController(service);
+        api = new ApiController(service,priceService);
     }
 
     @Test

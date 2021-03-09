@@ -4,8 +4,10 @@ import com.meubolso.provider.api.V1Api;
 import com.meubolso.provider.presentation.representation.DataRepresentation;
 import com.meubolso.repository.CurrencyMapper;
 import com.meubolso.service.CurrencyService;
+import com.meubolso.service.PriceService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ApiController implements V1Api {
 
     private final CurrencyService service;
+    private final PriceService priceService;
 
     @Override
     public ResponseEntity<DataRepresentation> getCurrency() {
@@ -27,7 +30,8 @@ public class ApiController implements V1Api {
 
     @Override
     public ResponseEntity<Void> updatePrices(){
-
-        return null;
+        log.info("updatePrices -> Tentativa updatePrices ");
+        var response = priceService.readPriceB3();
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 }
