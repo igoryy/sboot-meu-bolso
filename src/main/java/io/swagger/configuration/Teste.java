@@ -1,7 +1,6 @@
 package io.swagger.configuration;
 
 import com.meubolso.service.PriceService;
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class Teste {
 

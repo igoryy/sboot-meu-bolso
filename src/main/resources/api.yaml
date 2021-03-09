@@ -12,13 +12,13 @@ host: "petstore.swagger.io"
 schemes:
   - "http"
 paths:
-  /v1/cotacoes:
-    get:
+  /v1/prices:
+    post:
       tags:
-        - "updateCotacoes"
+        - "updatePrices"
       summary: "End point para atualizar cotacoes B3"
       description: "Consumo de arquivo cotacao historico"
-      operationId: "updateCotacao"
+      operationId: "updatePrices"
       produces:
         - "application/json"
       responses:

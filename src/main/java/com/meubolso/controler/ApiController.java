@@ -24,4 +24,10 @@ public class ApiController implements V1Api {
         return ResponseEntity.ok(CurrencyMapper.toRepresentation(response));
 
     }
+
+    @Override
+    public ResponseEntity<Void> updatePrices(){
+
+        return null;
+    }
 }
