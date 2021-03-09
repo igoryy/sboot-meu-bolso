@@ -5,16 +5,12 @@ import com.meubolso.currency_api.BTCIntegration;
 import com.meubolso.currency_api.DataIntegration;
 import com.meubolso.currency_api.EURIntegration;
 import com.meubolso.currency_api.USDIntegration;
-import com.meubolso.currency_api.provider.GetCurrencyApi;
 import com.meubolso.service.CurrencyService;
 import com.meubolso.service.PriceService;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.Test;
 import org.springframework.http.HttpStatus;
 
-import java.net.http.HttpResponse;
 
 import static org.junit.Assert.*;
 

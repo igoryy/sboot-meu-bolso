@@ -1,7 +1,5 @@
 package com.meubolso.config;
 
-import static springfox.documentation.builders.PathSelectors.regex;
-
 import java.util.ArrayList;
 
 import org.springframework.context.annotation.Bean;
