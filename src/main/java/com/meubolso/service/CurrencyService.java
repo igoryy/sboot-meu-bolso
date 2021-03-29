@@ -14,9 +14,7 @@ public class CurrencyService {
     private final CurrencyRepository repo;
 
     public DataIntegration getCurrency()  {
-
         try{
-
             var responseApi = repo.getCurrency();
             return responseApi;
         }catch (Exception e){

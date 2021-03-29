@@ -12,9 +12,7 @@ public class CurrencyRepository {
     GetCurrencyApi api;
 
     public DataIntegration getCurrency(){
-
         var response = api.getCurrency();
-
         return response;
     }
 

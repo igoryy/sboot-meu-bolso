@@ -21,7 +21,6 @@ public class ApiController implements V1Api {
 
     @Override
     public ResponseEntity<DataRepresentation> getCurrency() {
-
         log.info("getCurrency :: > Tentativa de busca ");
         var response = service.getCurrency();
         return ResponseEntity.ok(CurrencyMapper.toRepresentation(response));
