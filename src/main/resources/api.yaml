@@ -21,6 +21,8 @@ paths:
       operationId: "updatePrices"
       produces:
         - "application/json"
+      security:
+        - basicAuth: []
       responses:
         200:
           description: "OK"
@@ -37,6 +39,8 @@ paths:
       operationId: "getCurrency"
       produces:
         - "application/json"
+      security:
+        - basicAuth: []
       responses:
         200:
           description: "OK"
